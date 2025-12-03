@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة واحة الرياض | لتنسيق الحدائق والملاعب</title>
-    <!-- خط عربي مميز -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- مكتبة الانميشن AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- ملف التنسيق -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,12 +16,12 @@
     <nav class="mobile-nav" id="mobileNav">
         <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
         <ul>
-            <li><a href="#home" onclick="toggleMenu()">الرئيسية</a></li>
-            <li><a href="#about" onclick="toggleMenu()">من نحن</a></li>
-            <li><a href="#services" onclick="toggleMenu()">خدماتنا</a></li>
-            <li><a href="#process" onclick="toggleMenu()">كيف نعمل</a></li>
-            <li><a href="#why-us" onclick="toggleMenu()">لماذا نحن</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">تواصل معنا</a></li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#process">خطوات العمل</a></li>
+            <li><a href="#why-us">لماذا نحن</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
         </ul>
     </nav>
 
@@ -68,7 +64,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-image" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="images/photo-1598902108854-10e335adac99.avif" alt="فريق العمل">
+                    <!-- كلاس جديد للانميشن -->
+                    <img src="images/photo-1598902108854-10e335adac99.avif" alt="فريق العمل" class="float-animation">
                 </div>
                 <div class="col-text" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="section-title">من نحن</h2>
@@ -223,7 +220,8 @@
                     </div>
                 </div>
                 <div class="col-image" data-aos="zoom-in">
-                    <img src="images/alternatives-to-grass-11-no-mow-ideas-for-your-garden-real-homes.jpg" alt="حديقة منزلية" style="height: 100%; object-fit: cover;">
+                    <!-- كلاس جديد للانميشن -->
+                    <img src="images/alternatives-to-grass-11-no-mow-ideas-for-your-garden-real-homes.jpg" alt="حديقة منزلية" class="float-animation">
                 </div>
             </div>
         </div>
@@ -266,7 +264,7 @@
                     <form class="styled-form">
                         <h3>ارسل طلبك الآن</h3>
                         <div class="form-group">
-                            <label>الاسم الكريم</label>
+                            <label>الاسم</label>
                             <input type="text" placeholder="اكتب اسمك هنا" required>
                         </div>
                         <div class="form-group">
