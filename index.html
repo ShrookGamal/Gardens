@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة واحة الرياض | لتنسيق الحدائق والملاعب</title>
+    <!-- خط عربي مميز -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- مكتبة الانميشن AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ملف التنسيق -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- القائمة الجانبية للموبايل -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">الرئيسية</a></li>
+            <li><a href="#about" onclick="toggleMenu()">من نحن</a></li>
+            <li><a href="#services" onclick="toggleMenu()">خدماتنا</a></li>
+            <li><a href="#process" onclick="toggleMenu()">كيف نعمل</a></li>
+            <li><a href="#why-us" onclick="toggleMenu()">لماذا نحن</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- الهيدر -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-leaf"></i> واحة الرياض</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#process">خطوات العمل</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+            <h1>حوّل حلمك إلى <span class="highlight-text">واقع أخضر</span></h1>
+            <p>
+                في مؤسسة واحة الرياض، نبتكر مساحات خضراء تخطف الأنظار، وملاعب بمعايير عالمية، وديكورات تروي قصص الفخامة. دعنا نصمم لك ملاذاً طبيعياً يجمع بين الهدوء والجمال في قلب منزلك.
+            </p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary pulse-btn">اطلب خدمة الآن <i class="fas fa-arrow-left"></i></a>
+                <a href="#services" class="btn btn-secondary">استكشف خدماتنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="section-padding section-gradient-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="images/photo-1598902108854-10e335adac99.avif" alt="فريق العمل">
+                </div>
+                <div class="col-text" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="section-title">من نحن</h2>
+                    <p class="lead-text">
+                        يقوم فريق عمل محترف ومتخصص في الزراعة وتنسيق الحدائق وتنفيذ ملاعب كرة القدم واعمال الديكورات بالرياض بأعلى معايير الجودة والإتقان.
+                    </p>
+                    <p>
+                        نحن أكثر من مجرد شركة تنسيق حدائق؛ نحن رواد في صناعة الجمال الطبيعي. نجمع بين الخبرة الهندسية الدقيقة والذوق الفني الرفيع لتحويل المساحات الصامتة والجرداء إلى واحات تنبض بالحياة. نستخدم أحدث تقنيات الري الذكية لضمان الاستدامة، وننتقي أجود أنواع النباتات والأشجار التي تتلاءم مع بيئة المملكة، لنضمن لك حديقة مزدهرة طوال العام. هدفنا هو خلق بيئة تمنحك الراحة النفسية وترفع من قيمة عقارك.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services-section section-padding section-gradient-2">
+        <div class="container">
+            <h2 class="section-title center-title" data-aos="fade-up">خدماتنا المتكاملة</h2>
+            <div class="services-grid">
+                
+                <!-- خدمة 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-img">
+                        <img src="images/الزراعة وشبكات الري.jpg" alt="زراعة النخيل">
+                    </div>
+                    <div class="service-content">
+                        <h3>الزراعة وشبكات الري</h3>
+                        <p>نقدم حلولاً زراعية شاملة تشمل زراعة الثيل الطبيعي بأنواعه (C2000، فرنسي، ياباني) ليناسب جميع الاستخدامات، بالإضافة إلى زراعة النخيل المثمر (السكري، البرحي) والواشنطي للزينة. نقوم أيضاً بتركيب شبكات ري ذكية (تايمر) وعادية لضمان توفير المياه ونمو النباتات بشكل صحي.</p>
+                    </div>
+                </div>
+
+                <!-- خدمة 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-img">
+                        <img src="images/الشلالات والنوافير.webp" alt="شلالات">
+                    </div>
+                    <div class="service-content">
+                        <h3>الشلالات والنوافير</h3>
+                        <p>أضف صوتاً وحركة للمكان مع تصاميمنا المائية المذهلة. ننفذ شلالات جدارية ومصبات ستيل عصرية، ونوافير كلاسيكية وراقصة. كما نصمم جلسات خارجية متكاملة مع مظلات حديدية بتصاميم ليزر وإضاءة مخفية تضفي سحراً ودفئاً على الجلسات المسائية.</p>
+                    </div>
+                </div>
+
+                <!-- خدمة 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="ملاعب">
+                    </div>
+                    <div class="service-content">
+                        <h3>الملاعب الرياضية</h3>
+                        <p>تجهيز شامل لملاعب كرة القدم (عشب صناعي معتمد) بمقاسات خماسية وقانونية للمدارس والفلل والاستراحات. كما ننفذ ملاعب البادل والتنس بأرضيات اكريليك أو عشب، مع تركيب الشبوك وأعمدة الإنارة والكشافات القوية لضمان أفضل تجربة لعب.</p>
+                    </div>
+                </div>
+
+                <!-- خدمة 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-img">
+                        <img src="images/العشب الصناعي والديكور.webp" alt="عشب صناعي">
+                    </div>
+                    <div class="service-content">
+                        <h3>العشب الصناعي والديكور</h3>
+                        <p>توريد وتركيب عشب صناعي عالي الكثافة (3 سم - 5 سم) يتميز بالنعومة والمتانة ومقاومة الشمس. نبدع في تركيب العشب الجداري بتشكيلات 3D مع ديكورات خشبية وبديل الخشب، لنخلق لوحات فنية على جدران حوشك.</p>
+                    </div>
+                </div>
+
+                <!-- خدمة 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-img">
+                        <img src="images/الغرف الزجاجية والداخلية.jpg" alt="غرف زجاجية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الغرف الزجاجية والداخلية</h3>
+                        <p>استمتع بالمنظر الخارجي من داخل غرف زجاجية مكيفة (Sunrooms) مصممة بأعلى معايير العزل. نقوم أيضاً بتنسيق الحدائق الداخلية تحت الدرج باستخدام البحص والأحجار الطبيعية والنباتات الداخلية، مع أعمال الجبس بورد والإضاءة الحديثة.</p>
+                    </div>
+                </div>
+
+                <!-- خدمة 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-img">
+                        <img src="images/الممرات والحجر الطبيعي.webp" alt="ممرات حجرية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الممرات والحجر الطبيعي</h3>
+                        <p>رصف الممرات بطرق فنية باستخدام الحجر العشوائي (الكريمي، الأصفر) والأنترلوك والبحص الملون. نصمم مناطق المشب والجلسات البرية بلمسات تراثية عريقة ممزوجة بالحداثة، لتكون المكان الأمثل لاستقبال الضيوف.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- سكشن خطوات العمل -->
+    <section id="process" class="section-padding section-gradient-3">
+        <div class="container">
+            <h2 class="section-title center-title" data-aos="fade-down">رحلة تحويل الحديقة</h2>
+            <div class="process-container">
+                <div class="process-step" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>استشارة ومعاينة</h3>
+                    <p>نتلقى اتصالك، نستمع لمتطلباتك، ونزور الموقع لرفع المقاسات بدقة ومناقشة التصور المبدئي.</p>
+                </div>
+                <div class="process-step" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>تصميم مخصص</h3>
+                    <p>نقدم لك مخططات وتصاميم مقترحة تناسب ذوقك وتستغل كل زاوية في المساحة بذكاء.</p>
+                </div>
+                <div class="process-step" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-tools"></i>
+                    <h3>تنفيذ احترافي</h3>
+                    <p>يبدأ فريقنا الفني العمل باستخدام أفضل المعدات والخامات، مع الالتزام التام بالجدول الزمني.</p>
+                </div>
+                <div class="process-step" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>تسليم وضمان</h3>
+                    <p>نسلمك المشروع جاهزاً للاستمتاع به، مع تقديم ضمان شامل وخدمة صيانة دورية لراحة بالك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سكشن لماذا تختارنا -->
+    <section id="why-us" class="section-padding section-gradient-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-text" data-aos="fade-left">
+                    <h2 class="section-title">لماذا واحة الرياض؟</h2>
+                    <p class="lead-text">لأننا نؤمن أن التميز يكمن في التفاصيل، ولأن رضا عملائنا هو رأس مالنا الحقيقي.</p>
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <i class="fas fa-award"></i>
+                            <h4>جودة عالمية</h4>
+                            <p>لا نتنازل عن الجودة في اختيار النباتات، العشب، ومواد البناء.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-clock"></i>
+                            <h4>التزام بالمواعيد</h4>
+                            <p>نقدر وقتك، لذا ننجز المشاريع بدقة متناهية وفي الوقت المحدد.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-palette"></i>
+                            <h4>تصاميم عصرية</h4>
+                            <p>فريق تصميم مبدع يواكب أحدث صيحات الديكور وتنسيق الحدائق.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-headset"></i>
+                            <h4>خدمة ما بعد البيع</h4>
+                            <p>نبقى على تواصل معك لضمان استمرار جمال حديقتك وكفاءة الأنظمة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-image" data-aos="zoom-in">
+                    <img src="images/alternatives-to-grass-11-no-mow-ideas-for-your-garden-real-homes.jpg" alt="حديقة منزلية" style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل (المعدل) -->
+    <section id="contact" class="contact-section section-padding section-gradient-4">
+        <div class="container">
+            <h2 class="section-title center-title" data-aos="zoom-in">جاهزون لتنفيذ أفكارك.. تواصل معنا</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-card">
+                        <h3>بيانات التواصل</h3>
+                        <p class="contact-desc">فريق خدمة العملاء لدينا جاهز للرد على استفساراتكم وتقديم العروض طوال أيام الأسبوع.</p>
+                        <div class="info-item">
+                            <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                            <div class="info-text">
+                                <span>اتصل بنا مباشرة</span>
+                                <strong>0500000000</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-circle"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="info-text">
+                                <span>البريد الإلكتروني</span>
+                                <strong>info@riyadhoasis.com</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-circle"><i class="fas fa-map-marked-alt"></i></div>
+                            <div class="info-text">
+                                <span>موقعنا</span>
+                                <strong>الرياض، المملكة العربية السعودية</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <form class="styled-form">
+                        <h3>ارسل طلبك الآن</h3>
+                        <div class="form-group">
+                            <label>الاسم الكريم</label>
+                            <input type="text" placeholder="اكتب اسمك هنا" required>
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الجوال</label>
+                            <input type="text" placeholder="05xxxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label>الخدمة المطلوبة</label>
+                            <select>
+                                <option value="" disabled selected>اختر الخدمة من القائمة</option>
+                                <option>تنسيق حدائق كامل</option>
+                                <option>تركيب شبكات ري</option>
+                                <option>تنفيذ ملاعب رياضية</option>
+                                <option>شلالات ونوافير</option>
+                                <option>تركيب عشب صناعي</option>
+                                <option>ديكورات ومظلات</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>تفاصيل المشروع</label>
+                            <textarea placeholder="أخبرنا المزيد عن طلبك..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 pulse-btn">إرسال الطلب <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-leaf"></i> واحة الرياض</h2>
+                    <p>شريكك المثالي لتحويل المساحات إلى جنات خضراء. دقة، إتقان، وجمال يستحق التأمل.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#process">خطوات العمل</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2025 مؤسسة واحة الرياض</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ملف الجافاسكريبت -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
