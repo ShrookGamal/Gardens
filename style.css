@@ -11,27 +11,29 @@
     --transition: all 0.3s ease-in-out;
 }
 
-/* خلفيات متدرجة (أصبحت أقوى وأوضح) */
-/* قسم من نحن ولماذا نحن: تدرج أبيض إلى ذهبي فاتح جداً */
-.section-gradient-1 { 
-    background: linear-gradient(180deg, #ffffff 0%, #fffde7 100%);
-}
-/* قسم الخدمات: تدرج أبيض إلى أخضر فاتح منعش */
-.section-gradient-2 { 
-    background: linear-gradient(180deg, #f1f8e9 0%, #dcedc8 100%);
-}
-/* قسم خطوات العمل: تدرج رمادي فاتح مزرق */
-.section-gradient-3 { 
-    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-}
-/* قسم التواصل: تدرج أخضر واضح */
-.section-gradient-4 { 
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+/* خلفيات متدرجة */
+.section-gradient-1 { background: linear-gradient(180deg, #ffffff 0%, #fffde7 100%); }
+.section-gradient-2 { background: linear-gradient(180deg, #f1f8e9 0%, #dcedc8 100%); }
+.section-gradient-3 { background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); }
+.section-gradient-4 { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+
+/* --- الحل الجذري لمشكلة المساحة البيضاء --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Cairo', sans-serif; 
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important; /* يمنع السكرول الجانبي تماماً */
+    position: relative;
+}
+
 html { scroll-behavior: smooth; }
-body { background-color: var(--white); color: var(--dark-color); overflow-x: hidden; }
+body { background-color: var(--white); color: var(--dark-color); }
 
 /* --- الهيدر والقائمة --- */
 header {
@@ -93,22 +95,22 @@ header .container { display: flex; justify-content: space-between; align-items: 
     font-size: 1.8rem;
     cursor: pointer;
     color: var(--primary-color);
-    z-index: 5000; /* قيمة عالية جداً */
+    z-index: 5000;
 }
 
-/* --- القائمة الجانبية للموبايل (تم الإصلاح) --- */
+/* --- القائمة الجانبية للموبايل --- */
 .mobile-nav {
     position: fixed;
     top: 0;
     right: -100%;
     width: 280px;
-    height: 100vh; /* ارتفاع كامل للشاشة */
+    height: 100vh;
     background-color: var(--white);
-    z-index: 9999; /* أعلى من أي شيء في الموقع */
+    z-index: 9999;
     padding-top: 80px;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: -5px 0 20px rgba(0,0,0,0.2);
-    overflow-y: auto; /* للسماح بالسكرول داخل القائمة لو طويلة */
+    overflow-y: auto;
 }
 
 .mobile-nav.active { right: 0; }
@@ -135,18 +137,24 @@ header .container { display: flex; justify-content: space-between; align-items: 
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
-    z-index: 9000; /* تحت القائمة مباشرة */
+    z-index: 9000;
     display: none;
     backdrop-filter: blur(3px);
 }
 .mobile-nav-overlay.active { display: block; }
 
-/* --- الهيرو سكشن --- */
+/* --- الهيرو سكشن (تم التعديل لمنع المشكلة) --- */
 .hero {
+    width: 100vw; /* عرض كامل */
     height: 100vh;
-    background: url('images/photo-1585320806297-9794b3e4eeae.avif') no-repeat center center/cover;
+    background: url('images/photo-1585320806297-9794b3e4eeae.avif') no-repeat center center;
+    background-size: cover;
     position: relative;
-    display: flex; justify-content: center; align-items: center; text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    overflow: hidden; /* يمنع الصورة من الخروج */
 }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(12, 45, 13, 0.8)); }
 .hero-content { position: relative; z-index: 1; color: var(--white); padding: 0 20px; max-width: 850px; }
@@ -171,19 +179,16 @@ header .container { display: flex; justify-content: space-between; align-items: 
 .center-title { text-align: center; margin-bottom: 70px; }
 .center-title::after { content: ''; display: block; width: 120px; height: 6px; background: var(--secondary-gradient); margin: 15px auto 0; border-radius: 10px; }
 
-/* من نحن & لماذا نحن (تنسيقات الصور) */
+/* من نحن & لماذا نحن */
 .row { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; }
 .col-image, .col-text { flex: 1; min-width: 320px; }
 .col-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); transition: var(--transition); }
 
-/* --- انميشن جديد للصور (Float) --- */
-.float-animation {
-    animation: float 6s ease-in-out infinite;
-}
-
+/* --- انميشن الطفو --- */
+.float-animation { animation: float 6s ease-in-out infinite; }
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); } /* تتحرك لأعلى 20 بكسل */
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
 
@@ -247,30 +252,57 @@ footer { background-color: #1a252f; color: #cfd8dc; padding: 70px 0 30px; text-a
 .footer-links ul li a:hover { color: var(--secondary-color); text-shadow: 0 0 10px rgba(251, 192, 45, 0.5); }
 .copyright { border-top: 1px solid #37474f; padding-top: 25px; font-size: 0.95rem; color: #78909c; }
 
-/* --- الميديا كويري للموبايل (تحسينات شاملة) --- */
+/* --- الميديا كويري للموبايل (معدلة بالكامل للإصلاح) --- */
 @media (max-width: 768px) {
+    /* ضبط الحاوية لتكون عرض كامل دون خروج */
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
     /* إخفاء القائمة العادية وإظهار البرجر */
     header .nav-links { display: none !important; }
     .hamburger { display: block !important; }
 
-    /* تحسين النصوص */
-    .hero-content h1 { font-size: 2rem; }
-    .hero-content p { font-size: 1rem; max-width: 100%; }
-    .hero-btns { flex-direction: column; width: 100%; }
-    .btn { width: 100%; margin-bottom: 10px; }
+    /* ضبط الهيرو */
+    .hero-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 { 
+        font-size: 2rem; 
+        line-height: 1.4;
+    }
+    
+    .hero-content p { 
+        font-size: 1rem; 
+        max-width: 100%; 
+    }
+    
+    .hero-btns { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px;
+    }
+    
+    .btn { 
+        width: 100%; 
+        margin: 0; 
+    }
     
     /* تحسين الأقسام */
-    .section-padding { padding: 60px 0; }
+    .section-padding { padding: 50px 0; }
     .row { flex-direction: column; gap: 30px; }
+    .col-image img { width: 100%; height: auto; }
     .contact-container { flex-direction: column-reverse; }
     .features-grid { grid-template-columns: 1fr; }
     
-    /* تحسين الكروت والفورم */
+    /* منع الفورم والكروت من الخروج عن الشاشة */
     .service-card, .process-step, .contact-card, .styled-form {
         width: 100%;
         margin-bottom: 20px;
+        box-sizing: border-box; /* تمنع البادينج من توسيع العنصر */
     }
-    
-    /* ضبط الحواف للموبايل */
-    .container { width: 95%; }
 }
