@@ -625,3 +625,114 @@ footer p {
     color: var(--primary-color);   /* يتحول للأخضر عند الماوس */
     text-shadow: 0 0 5px rgba(46, 125, 50, 0.5); /* تأثير توهج بسيط */
 }
+/* =========================================
+   إصلاحات وتنسيق الموبايل (Final Mobile Fix)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. ضبط الحاوية لعدم الخروج عن الشاشة */
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
+    /* 2. إصلاح الهيدر واللوجو */
+    header {
+        padding: 10px 0; /* تقليل ارتفاع الهيدر */
+    }
+    
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo h1 {
+        font-size: 1rem; /* تصغير خط اللوجو ليظهر في سطر واحد أو سطرين صغار */
+        line-height: 1.4;
+        max-width: 200px; /* لضمان عدم تداخله مع زر القائمة */
+    }
+    
+    .logo h1 i {
+        font-size: 1.2rem; /* تصغير أيقونة الورقة */
+    }
+
+    .hamburger {
+        display: block !important;
+        font-size: 1.5rem; /* تصغير زر القائمة قليلاً */
+    }
+    
+    header .nav-links { display: none !important; }
+
+    /* 3. إصلاح قسم الهيرو (الخلفية والكلام) */
+    .hero {
+        height: 100vh; /* ارتفاع كامل */
+        padding-top: 80px; /* مسافة من فوق عشان الكلام مايدخلش في الهيدر */
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 { 
+        font-size: 1.8rem; /* تصغير العنوان الرئيسي "حول حلمك..." */
+        margin-bottom: 15px;
+    }
+    
+    /* 4. إصلاح بادج الخبرة (المربع الذهبي) */
+    .experience-badge {
+        font-size: 0.85rem; /* تصغير الخط */
+        padding: 8px 15px;
+        width: auto;
+        display: inline-block; /* عشان ياخد حجم الكلام بس */
+        max-width: 100%;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        white-space: normal; /* السماح للكلام ينزل سطر تاني بشكل طبيعي */
+    }
+
+    .hero-content p { 
+        font-size: 0.95rem; /* تصغير الفقرة الوصفية */
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    
+    /* 5. إصلاح الأزرار */
+    .hero-btns { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px;
+    }
+    
+    .btn { 
+        width: 100%; 
+        margin: 0; 
+        padding: 12px 0; /* تقليل سمك الزر */
+        font-size: 1rem;
+    }
+    
+    /* باقي التنسيقات العامة */
+    .section-padding { padding: 50px 0; }
+    .row { flex-direction: column; gap: 30px; }
+    .col-image img { width: 100%; height: auto; }
+    .contact-container { flex-direction: column-reverse; }
+    .features-grid { grid-template-columns: 1fr; }
+    
+    /* منع الفورم والكروت من الخروج */
+    .service-card, .process-step, .contact-card, .styled-form {
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    
+    /* إصلاح الفوتر في الموبايل */
+    .footer-col h3::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .footer-row { text-align: center; }
+    .contact-row { justify-content: center; }
+}
