@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفاصيل الخدمة | واحة الرياض</title>
+    <title>تفاصيل الخدمة | حدائق و ملاعب زهرة الريان</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -11,7 +11,6 @@
 </head>
 <body>
 
-    <!-- القائمة الجانبية (نفس الرئيسية) -->
     <nav class="mobile-nav" id="mobileNav">
         <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
         <ul>
@@ -20,12 +19,10 @@
             <li><a href="index.html#contact">تواصل معنا</a></li>
         </ul>
     </nav>
-
-    <!-- الهيدر -->
     <header id="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html" style="text-decoration:none;"><h1><i class="fas fa-leaf"></i> واحة الرياض</h1></a>
+                <a href="index.html" style="text-decoration:none;"><h1><i class="fas fa-leaf"></i>حدائق و ملاعب زهرة الريان</h1></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">الرئيسية</a></li>
@@ -37,20 +34,15 @@
             </div>
         </div>
     </header>
-
-    <!-- الهيرو الخاص بالخدمة -->
     <div class="details-hero" id="serviceHero">
         <div style="position: relative; z-index: 2;">
             <h1 id="serviceTitle">جاري التحميل...</h1>
         </div>
     </div>
-
-    <!-- محتوى الخدمة -->
     <section class="details-content">
         <div class="container">
             <div class="details-grid">
                 
-                <!-- الجزء اليمين: التفاصيل -->
                 <div class="main-info" data-aos="fade-left">
                     <h2 id="serviceSubtitle">وصف الخدمة</h2>
                     <p id="serviceDesc">وصف تفصيلي...</p>
@@ -58,11 +50,13 @@
                     <h3><i class="fas fa-star" style="color:#fbc02d;"></i> مميزات الخدمة:</h3>
                     <ul class="features-list-check" id="serviceFeatures"></ul>
 
-                    <h3><i class="fas fa-images" style="color:#2e7d32;"></i> معرض صور:</h3>
-                    <div class="gallery-mini-grid" id="serviceGallery"></div>
+                     <h3><i class="fas fa-video" style="color:#2e7d32;"></i> فيديوهات من أعمالنا:</h3>
+                    <div class="media-grid" id="serviceVideos"></div>
+
+                    <h3><i class="fas fa-images" style="color:#fbc02d;"></i> صور من أعمالنا:</h3>
+                <div class="media-grid" id="serviceGallery"></div>
                 </div>
 
-                <!-- الجزء اليسار: حجز الخدمة -->
                 <div class="sidebar-area" data-aos="fade-right">
                     <div class="booking-sidebar">
                         <h3>احجز هذه الخدمة</h3>
@@ -87,176 +81,204 @@
             </div>
         </div>
     </section>
-
-    <!-- الفوتر -->
-    <footer>
-        <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2025 مؤسسة واحة الرياض</p>
-        </div>
-    </footer>
-
+    <footer style="text-align: center;">
+    <div class="container">
+        <p style="margin: 0;">جميع الحقوق محفوظة &copy; مؤسسة حدائق و ملاعب زهرة الريان</p>
+    </div>
+    </footer>   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+    AOS.init();
 
-        // 1. قاعدة بيانات الخدمات
-        
-        // بيانات الخدمات (محتوى دسم ومفصل)
-const servicesDB = {
-    '1': {
-        title: 'الزراعة وشبكات الري الحديثة',
-        image: 'images/الزراعة وشبكات الري.jpg',
-        desc: `تعتبر الزراعة هي الروح الحقيقية لأي حديقة. في واحة الرياض، لا نقوم فقط بغرس النباتات، بل نقوم بدراسة متكاملة لطبيعة التربة وتوزيع الضوء والظل في حديقتك.
+    const servicesDB = {
+        '1': {
+            title: 'الزراعة وشبكات الري الحديثة',
+            image: 'images/الزراعة وشبكات الري.jpg',
+            desc: `تعتبر الزراعة هي الروح الحقيقية لأي حديقة. في حدائق و ملاعب زهرة الريان، لا نقوم فقط بغرس النباتات، بل نقوم بدراسة متكاملة لطبيعة التربة وتوزيع الضوء والظل في حديقتك.
 
-        نبدأ بتركيب شبكات ري أوتوماتيكية متطورة (من ماركات عالمية مثل Hunter و Rain Bird) تضمن وصول المياه لكل نبتة بالكمية المناسبة دون هدر، ويمكن التحكم بها عبر الهاتف.
-        
-        نقوم بزراعة أجود أنواع الثيل الطبيعي (C2000 الأمريكي، والياباني) الذي يتحمل الحرارة، بالإضافة إلى زراعة النخيل المثمر (السكري، البرحي، الإخلاص) والنخيل الواشنطي للزينة، مع ضمان خلوها من الآفات ومعالجة سوسة النخيل بأحدث الطرق العلمية.`,
-        features: [
-            'توريد أجود أنواع التربة الزراعية المحسنة.',
-            'تصميم شبكات ري مخفية وذكية (Smart Irrigation).',
-            'زراعة أشجار الظل والمصدات والأشجار المتسلقة.',
-            'تنسيق أحواض الزهور الموسمية والدائمة.',
-            'عقود صيانة شهرية وسنوية لضمان نضارة الحديقة.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1558293842-c0fd3db8a8b6?w=600',
-            'https://images.unsplash.com/photo-1599689017232-a9b08639207e?w=600',
-            'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600'
-        ]
-    },
-    '2': {
-        title: 'تصميم الشلالات والنوافير',
-        image: 'images/الشلالات والنوافير.webp',
-        desc: `صوت خرير المياه يضفي حياة وسكينة على المكان. نحن متخصصون في تصميم وتنفيذ الشلالات والنوافير التي تعتبر تحفاً فنية في حديقتك.
-        
-        نقدم تصاميم شلالات جدارية مودرن تناسب المساحات الضيقة، وشلالات صخرية تحاكي الطبيعة، بالإضافة إلى المصبات الاستيل (Stainless Steel) المقاومة للصدأ والتي تعطي تدفقاً انسيابياً للمياه.
-        
-        نهتم بأدق التفاصيل الهندسية: العزل المائي بضمان حقيقي لمنع التسريب، استخدام مضخات غاطسة قوية وصامتة، وتوزيع إضاءة LED غاطسة ملونة لتجعل المنظر ليلاً يخطف الأنظار.`,
-        features: [
-            'شلالات جدارية وركنية بتصاميم عصرية.',
-            'نوافير راقصة ونوافير دائرية ومستطيلة.',
-            'تكسيات حجرية ورخامية وخشبية للشلال.',
-            'ضمان كامل على العزل والمضخات وأعمال السباكة.',
-            'إضاءة مخفية (Hidden Light) لإبراز جمال المياه.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1516641396056-0ce60a85d49f?w=600',
-            'https://images.unsplash.com/photo-1570544888846-991f86236b3c?w=600',
-            'https://images.unsplash.com/photo-1584964722521-886f34d1933a?w=600'
-        ]
-    },
-    '3': {
-        title: 'تجهيز الملاعب الرياضية',
-        image: 'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-        desc: `سواء كنت تريد ملعباً خاصاً في فيلتك، أو تجهيز ملاعب للمدارس والاستراحات، نحن نقدم لك حلولاً احترافية.
-        
-        نستخدم العشب الصناعي المخصص للملاعب (بمواصفات الفيفا) الذي يتميز بمرونة عالية وكثافة تتحمل اللعب المستمر والجري، مع طبقات مطاطية (SBR) وسيليكا لضمان سلامة اللاعبين.
-        
-        نقوم بتنفيذ الملاعب من الألف للياء: تسوية الأرض، صبة الخرسانة، تركيب العشب، تخطيط الملعب، تركيب الشبوك الحديدية، وتثبيت أعمدة الإنارة بالكشافات القوية.`,
-        features: [
-            'تنفيذ ملاعب كرة قدم (خماسي، سداسي، قانوني).',
-            'ملاعب بادل وتنس بأرضيات اكريليك أو عشب.',
-            'عشب صناعي مقاوم للاحتكاك وضمان يصل لـ 7 سنوات.',
-            'تركيب مرمى وشبك وأعمدة إنارة بجودة عالية.',
-            'صيانة دورية للملاعب وتجديد الحبيبات المطاطية.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=600',
-            'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600',
-            'https://images.unsplash.com/photo-1560249539-74d327572621?w=600'
-        ]
-    },
-    '4': {
-        title: 'العشب الصناعي والديكورات',
-        image: 'images/العشب الصناعي والديكور.webp',
-        desc: `العشب الصناعي هو الحل المثالي للباحثين عن الجمال الدائم دون عناء الصيانة والري وفواتير المياه.
-        
-        نوفر تشكيلة واسعة من العشب الصناعي (لاندسكيب) بكثافات مختلفة (30ملم، 40ملم، 50ملم) يتميز بملمس ناعم ومظهر طبيعي جداً، ومقاوم لأشعة الشمس الحارقة (UV Resistant) فلا يتغير لونه.
-        
-        نبدع أيضاً في الديكورات الجدارية: دمج العشب الجداري مع بديل الخشب وبديل الرخام، وتصميم جدران 3D بأشكال هندسية، مع إضافة إضاءة وفوانيس لتصبح الجدران لوحات فنية.`,
-        features: [
-            'عشب صناعي عالي الكثافة لا يحتاج لري أو قص.',
-            'عشب جداري (ياسمين، بنفسج، 3D Mix).',
-            'آمن تماماً للأطفال والحيوانات الأليفة وصديق للبيئة.',
-            'ديكورات خشبية للممرات والجلسات.',
-            'سرعة في التركيب ودقة في الفنش النهائي.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?w=600',
-            'https://images.unsplash.com/photo-1558435186-d31d143dc3d8?w=600',
-            'https://images.unsplash.com/photo-1533630733842-2d6451dc04d4?w=600'
-        ]
-    },
-    '5': {
-        title: 'الغرف الزجاجية والحدائق الداخلية',
-        image: 'images/الغرف الزجاجية والداخلية.jpg',
-        desc: `استمتع بجمال حديقتك في كل فصول السنة مع الغرف الزجاجية (Sunrooms). نحن نصمم وننفذ ملاحق وغرف زجاجية بقطاعات ألومنيوم وحديد معزولة، وزجاج دبل جلاس عازل للحرارة والصوت.
-        
-        كما نهتم بالحدائق الداخلية (Indoor Gardens): نستغل المساحات تحت الدرج وفي الزوايا لعمل أحواض زراعية أنيقة باستخدام نباتات الظل، والبحص الديكوري، والأحجار البيضاء، مع إضاءة موجهة تبرز جمال المكان.`,
-        features: [
-            'غرف زجاجية بانورامية بإطلالة كاملة على الحديقة.',
-            'عزل حراري ومائي 100% للأسقف والجدران.',
-            'تنسيق حدائق تحت الدرج (Under Stairs Landscape).',
-            'أعمال الجبس بورد والأسقف المستعارة.',
-            'جلسات داخلية مكيفة وسط الطبيعة.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600',
-            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600',
-            'https://images.unsplash.com/photo-1600607686527-6fb886090705?w=600'
-        ]
-    },
-    '6': {
-        title: 'الممرات الحجرية والجلسات التراثية',
-        image: 'images/الممرات والحجر الطبيعي.webp',
-        desc: `الممرات هي الشرايين التي تربط أجزاء حديقتك ببعضها. نحن نتفنن في رصف الممرات باستخدام الحجر الطبيعي العشوائي (الحجر الأصفر، الحجر الكريمي، حجر الرياض) بطرق هندسية جميلة تمنع انزلاق المشاة.
-        
-        كما نقوم بتصميم الجلسات الخارجية المتنوعة: جلسات أرضية تراثية، جلسات مرتفعة (دكة)، ومناطق الشواء (BBQ Area) والمشب، مع تزيينها بالبحص الملون والفواصل الديكورية والإضاءة الأرضية التي ترسم مسار الممر ليلاً.`,
-        features: [
-            'توريد وتركيب جميع أنواع الحجر الطبيعي والعشوائي.',
-            'تصميم مشايات وممرات بالأنترلوك والخرسانة المطبوعة.',
-            'جلسات خارجية مقاومة للعوامل الجوية.',
-            'تنسيق مناطق الشواء والمشبات الحجرية.',
-            'فواصل من البحص الأبيض والرمادي.'
-        ],
-        gallery: [
-            'https://images.unsplash.com/photo-1597940218820-22c7eb16c4f0?w=600',
-            'https://images.unsplash.com/photo-1621891334460-1b7713d03828?w=600',
-            'https://images.unsplash.com/photo-1496395919018-97e06a3ee594?w=600'
-        ]
-    }
-};
-
-// ... باقي كود الجافاسكريبت لجلب البيانات (نفس السابق) ...
-// (تأكدي من نسخ باقي الكود من الرد السابق الذي يعالج الـ URL parameters)
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const serviceId = urlParams.get('id');
-
-        if(serviceId && servicesDB[serviceId]) {
-            const data = servicesDB[serviceId];
-            document.getElementById('serviceTitle').innerText = data.title;
-            document.getElementById('serviceSubtitle').innerText = 'عن ' + data.title;
-            document.getElementById('serviceDesc').innerText = data.desc;
-            document.getElementById('serviceHero').style.backgroundImage = `url('${data.image}')`;
-            document.getElementById('bookingServiceName').value = 'طلب: ' + data.title;
-
-            data.features.forEach(f => {
-                document.getElementById('serviceFeatures').innerHTML += `<li><i class="fas fa-check-circle"></i> ${f}</li>`;
-            });
-
-            data.gallery.forEach(img => {
-                document.getElementById('serviceGallery').innerHTML += `<img src="${img}">`;
-            });
+            نبدأ بتركيب شبكات ري أوتوماتيكية متطورة (من ماركات عالمية مثل Hunter و Rain Bird) تضمن وصول المياه لكل نبتة بالكمية المناسبة دون هدر، ويمكن التحكم بها عبر الهاتف.
+            
+            نقوم بزراعة أجود أنواع الثيل الطبيعي (C2000 الأمريكي، والياباني) الذي يتحمل الحرارة، بالإضافة إلى زراعة النخيل المثمر (السكري، البرحي، الإخلاص) والنخيل الواشنطي للزينة، مع ضمان خلوها من الآفات ومعالجة سوسة النخيل بأحدث الطرق العلمية.`,
+            features: [
+                'توريد أجود أنواع التربة الزراعية المحسنة.',
+                'تصميم شبكات ري مخفية وذكية (Smart Irrigation).',
+                'زراعة أشجار الظل والمصدات والأشجار المتسلقة.',
+                'تنسيق أحواض الزهور الموسمية والدائمة.',
+                'عقود صيانة شهرية وسنوية لضمان نضارة الحديقة.'
+            ],
+            videos: [
+                'videos/video1.mp4',
+                'videos/video2.mp4'
+            ],
+            gallery: [
+                'images/img2.jpg',
+                'images/IMG-20251204-WA0013.jpg'
+            ]
+        },
+        '2': {
+            title: 'تصميم الشلالات والنوافير',
+            image: 'images/الشلالات والنوافير.webp',
+            desc: `صوت خرير المياه يضفي حياة وسكينة على المكان. نحن متخصصون في تصميم وتنفيذ الشلالات والنوافير التي تعتبر تحفاً فنية في حديقتك.
+            
+            نقدم تصاميم شلالات جدارية مودرن تناسب المساحات الضيقة، وشلالات صخرية تحاكي الطبيعة، بالإضافة إلى المصبات الاستيل (Stainless Steel) المقاومة للصدأ والتي تعطي تدفقاً انسيابياً للمياه.
+            
+            نهتم بأدق التفاصيل الهندسية: العزل المائي بضمان حقيقي لمنع التسريب، استخدام مضخات غاطسة قوية وصامتة، وتوزيع إضاءة LED غاطسة ملونة لتجعل المنظر ليلاً يخطف الأنظار.`,
+            features: [
+                'شلالات جدارية وركنية بتصاميم عصرية.',
+                'نوافير راقصة ونوافير دائرية ومستطيلة.',
+                'تكسيات حجرية ورخامية وخشبية للشلال.',
+                'ضمان كامل على العزل والمضخات وأعمال السباكة.',
+                'إضاءة مخفية (Hidden Light) لإبراز جمال المياه.'
+            ],
+            videos: [
+                'videos/video3.mp4',
+                'videos/video4.mp4'
+            ],
+            gallery: [
+                'images/img3.webp',
+                'images/img4.jpg'
+            ]
+        },
+        '3': {
+            title: 'تجهيز الملاعب الرياضية',
+            image: 'images/IMG-20251204-WA0017.jpg',
+            desc: `سواء كنت تريد ملعباً خاصاً في فيلتك، أو تجهيز ملاعب للمدارس والاستراحات، نحن نقدم لك حلولاً احترافية.
+            
+            نستخدم العشب الصناعي المخصص للملاعب (بمواصفات الفيفا) الذي يتميز بمرونة عالية وكثافة تتحمل اللعب المستمر والجري، مع طبقات مطاطية (SBR) وسيليكا لضمان سلامة اللاعبين.
+            
+            نقوم بتنفيذ الملاعب من الألف للياء: تسوية الأرض، صبة الخرسانة، تركيب العشب، تخطيط الملعب، تركيب الشبوك الحديدية، وتثبيت أعمدة الإنارة بالكشافات القوية.`,
+            features: [
+                'تنفيذ ملاعب كرة قدم (خماسي، سداسي، قانوني).',
+                'ملاعب بادل وتنس بأرضيات اكريليك أو عشب.',
+                'عشب صناعي مقاوم للاحتكاك وضمان يصل لـ 7 سنوات.',
+                'تركيب مرمى وشبك وأعمدة إنارة بجودة عالية.',
+                'صيانة دورية للملاعب وتجديد الحبيبات المطاطية.'
+            ],
+            videos: [
+                'videos/video5.mp4',
+                'videos/video6.mp4'
+            ],
+            gallery: [
+                'images/img5.jpg',
+                'images/img6.jpg'
+            ]
+        },
+        '4': {
+            title: 'العشب الصناعي والديكورات',
+            image: 'images/العشب الصناعي والديكور.webp',
+            desc: `العشب الصناعي هو الحل المثالي للباحثين عن الجمال الدائم دون عناء الصيانة والري وفواتير المياه.
+            
+            نوفر تشكيلة واسعة من العشب الصناعي (لاندسكيب) بكثافات مختلفة (30ملم، 40ملم، 50ملم) يتميز بملمس ناعم ومظهر طبيعي جداً، ومقاوم لأشعة الشمس الحارقة (UV Resistant) فلا يتغير لونه.
+            
+            نبدع أيضاً في الديكورات الجدارية: دمج العشب الجداري مع بديل الخشب وبديل الرخام، وتصميم جدران 3D بأشكال هندسية، مع إضافة إضاءة وفوانيس لتصبح الجدران لوحات فنية.`,
+            features: [
+                'عشب صناعي عالي الكثافة لا يحتاج لري أو قص.',
+                'عشب جداري (ياسمين، بنفسج، 3D Mix).',
+                'آمن تماماً للأطفال والحيوانات الأليفة وصديق للبيئة.',
+                'ديكورات خشبية للممرات والجلسات.',
+                'سرعة في التركيب ودقة في الفنش النهائي.'
+            ],
+            videos: [
+                'videos/video7.mp4',
+                'videos/video8.mp4'
+            ],
+            gallery: [
+                'images/img7.jpg',
+                'images/img8.jpg'
+            ]
+        },
+        '5': {
+            title: 'الغرف الزجاجية والحدائق الداخلية',
+            image: 'images/الغرف الزجاجية والداخلية.jpg',
+            desc: `استمتع بجمال حديقتك في كل فصول السنة مع الغرف الزجاجية (Sunrooms). نحن نصمم وننفذ ملاحق وغرف زجاجية بقطاعات ألومنيوم وحديد معزولة، وزجاج دبل جلاس عازل للحرارة والصوت.
+            
+            كما نهتم بالحدائق الداخلية (Indoor Gardens): نستغل المساحات تحت الدرج وفي الزوايا لعمل أحواض زراعية أنيقة باستخدام نباتات الظل، والبحص الديكوري، والأحجار البيضاء، مع إضاءة موجهة تبرز جمال المكان.`,
+            features: [
+                'غرف زجاجية بانورامية بإطلالة كاملة على الحديقة.',
+                'عزل حراري ومائي 100% للأسقف والجدران.',
+                'تنسيق حدائق تحت الدرج (Under Stairs Landscape).',
+                'أعمال الجبس بورد والأسقف المستعارة.',
+                'جلسات داخلية مكيفة وسط الطبيعة.'
+            ],
+            videos: [
+                'videos/video9.mp4',
+                'videos/video10.mp4'
+            ],
+            gallery: [
+                'images/img9.jpg',
+                'images/img10.jpg'
+            ]
+        },
+        '6': {
+            title: 'الممرات الحجرية والجلسات التراثية',
+            image: 'images/الممرات والحجر الطبيعي.webp',
+            desc: `الممرات هي الشرايين التي تربط أجزاء حديقتك ببعضها. نحن نتفنن في رصف الممرات باستخدام الحجر الطبيعي العشوائي (الحجر الأصفر، الحجر الكريمي، حجر الرياض) بطرق هندسية جميلة تمنع انزلاق المشاة.
+            
+            كما نقوم بتصميم الجلسات الخارجية المتنوعة: جلسات أرضية تراثية، جلسات مرتفعة (دكة)، ومناطق الشواء (BBQ Area) والمشب، مع تزيينها بالبحص الملون والفواصل الديكورية والإضاءة الأرضية التي ترسم مسار الممر ليلاً.`,
+            features: [
+                'توريد وتركيب جميع أنواع الحجر الطبيعي والعشوائي.',
+                'تصميم مشايات وممرات بالأنترلوك والخرسانة المطبوعة.',
+                'جلسات خارجية مقاومة للعوامل الجوية.',
+                'تنسيق مناطق الشواء والمشبات الحجرية.',
+                'فواصل من البحص الأبيض والرمادي.'
+            ],
+            videos: [
+                'videos/video11.mp4',
+                'videos/video12.mp4'
+            ],
+            gallery: [
+                'images/img11.jpg',
+                'images/img12.webp'
+            ]
         }
+    };
 
-        // تفعيل القائمة للموبايل (نفس الكود المشترك)
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-        const closeBtn = document.getElementById('closeBtn');
-        function toggleMenu() { mobileNav.classList.toggle('active'); }
-        if(hamburger) hamburger.addEventListener('click', toggleMenu);
-        if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
-    </script>
+    // كود جلب البيانات وعرضها
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = urlParams.get('id');
+
+    if(serviceId && servicesDB[serviceId]) {
+        const data = servicesDB[serviceId];
+        
+        // 1. تعبئة النصوص
+        document.getElementById('serviceTitle').innerText = data.title;
+        document.getElementById('serviceSubtitle').innerText = 'عن ' + data.title;
+        document.getElementById('serviceDesc').innerText = data.desc;
+        document.getElementById('serviceHero').style.backgroundImage = `url('${data.image}')`;
+        document.getElementById('bookingServiceName').value = 'طلب: ' + data.title;
+
+        // 2. تعبئة المميزات
+        data.features.forEach(f => {
+            document.getElementById('serviceFeatures').innerHTML += `<li><i class="fas fa-check-circle"></i> ${f}</li>`;
+        });
+
+        // 3. تعبئة الفيديوهات (Loop)
+        const videosContainer = document.getElementById('serviceVideos');
+        data.videos.forEach(vidUrl => {
+            videosContainer.innerHTML += `
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="${vidUrl}" type="video/mp4">
+                        المتصفح لا يدعم الفيديو.
+                    </video>
+                </div>
+            `;
+        });
+
+        // 4. تعبئة الصور (Loop)
+        const galleryContainer = document.getElementById('serviceGallery');
+        data.gallery.forEach(imgSrc => {
+            galleryContainer.innerHTML += `<img src="${imgSrc}" alt="${data.title}">`;
+        });
+    }
+
+    // كود القائمة (ثابت)
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeBtn = document.getElementById('closeBtn');
+    function toggleMenu() { mobileNav.classList.toggle('active'); }
+    if(hamburger) hamburger.addEventListener('click', toggleMenu);
+    if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+</script>
 </body>
 </html>

@@ -80,11 +80,40 @@ header .container { display: flex; justify-content: space-between; align-items: 
 
 /* الهيرو */
 .hero {
-    width: 100vw; height: 100vh; background: url('images/photo-1585320806297-9794b3e4eeae.avif') no-repeat center center/cover;
+    width: 100vw; height: 100vh; background: url('images/IMG-20251204-WA0015.jpg') no-repeat center center/cover;
     position: relative; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden;
 }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(12, 45, 13, 0.8)); }
 .hero-content { position: relative; z-index: 1; color: var(--white); padding: 0 20px; max-width: 850px; }
+/* تنسيق جملة الخبرة (Badge) */
+.experience-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6); /* خلفية سوداء شفافة */
+    color: var(--secondary-color); /* لون النص ذهبي */
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 50px; /* حواف دائرية */
+    border: 2px solid var(--secondary-color); /* إطار ذهبي */
+    margin-bottom: 25px; /* مسافة تحتها */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* ظل خفيف */
+    backdrop-filter: blur(5px);
+}
+
+.experience-badge i {
+    margin-left: 10px;
+    color: #fff; /* لون الايقونة أبيض */
+}
+
+/* تعديل بسيط للموبايل عشان الخط يكون مناسب */
+@media (max-width: 768px) {
+    .experience-badge {
+        font-size: 1rem;
+        padding: 8px 15px;
+        width: 100%; /* تاخد عرض الشاشة في الموبايل */
+        border-radius: 10px;
+    }
+}
 .hero-content h1 { font-size: 3.5rem; margin-bottom: 25px; text-shadow: 0 4px 15px rgba(0,0,0,0.4); }
 .highlight-text { color: var(--secondary-color); font-style: italic; }
 .hero-content p { font-size: 1.3rem; margin-bottom: 45px; max-width: 700px; margin: 0 auto 40px; }
@@ -215,26 +244,30 @@ footer {
 
 /* العناوين */
 .footer-col h3 {
-    color: var(--secondary-color); /* لون ذهبي */
+    color: var(--secondary-color);
     font-size: 1.4rem;
     margin-bottom: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 15px; /* زودنا المسافة شوية عشان الخط يبان */
     position: relative;
     font-weight: 700;
+    text-align: center; /* دي اللي بتجيب الكلمة في النص */
 }
+
 
 /* الخط تحت العنوان */
 .footer-col h3::after {
     content: '';
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 40px;
+    /* الكود السحري للتوسيط: */
+    right: 50%; 
+    transform: translateX(50%); 
+    /* ----------------------- */
+    width: 50px; /* طول الخط */
     height: 3px;
-    background-color: var(--primary-color); /* أخضر */
+    background-color: var(--primary-color);
     border-radius: 2px;
 }
-
 /* النص في العمود الأول */
 .footer-col p {
     color: #bdc3c7;
@@ -358,11 +391,6 @@ footer {
     .booking-sidebar { position: static; }
     .service-card, .process-step, .contact-card, .styled-form { width: 100%; margin-bottom: 20px; }
 }
-/* =========================================
-   تعديلات أنميشن قسم "رحلة تحويل الحديقة"
-   ========================================= */
-
-/* حركة الكارت بالكامل */
 .process-step {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة نطاطة */
 }
@@ -396,4 +424,204 @@ footer {
 .process-step:hover i {
     transform: scale(1.2);
     color: var(--secondary-color);
+}
+/* --- تنسيق رقم الهاتف كرابط --- */
+.phone-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+.phone-link:hover {
+    color: var(--primary-color);
+}
+
+/* --- تنسيق صندوق السوشيال ميديا في كارت التواصل --- */
+.social-box {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.social-box p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+.social-buttons {
+    display: flex;
+    gap: 15px;
+}
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.social-btn i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ألوان الأزرار */
+.insta {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.tiktok {
+    background: #000;
+    border: 1px solid #333;
+}
+
+/* --- تنسيق أيقونات السوشيال ميديا في الفوتر --- */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.icon-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.icon-link:hover {
+    transform: rotate(360deg);
+}
+
+/* ألوان الهوفر في الفوتر */
+.insta-icon:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.tiktok-icon:hover {
+    background: #000;
+    color: #00f2ea; /* لون تيك توك المميز */
+    text-shadow: 2px 2px 0 #ff0050;
+}
+
+/* تعديل للموبايل */
+@media (max-width: 768px) {
+    .footer-social-icons {
+        justify-content: center;
+    }
+}
+/* تنسيق حاوية الفيديو */
+.video-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 56.25%; /* نسبة 16:9 */
+    background: #000;
+}
+
+.video-container video, 
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تعديل بسيط للصور لتكون متناسقة مع الفيديو */
+.gallery-mini-grid {
+    grid-template-columns: repeat(2, 1fr); /* صورتين جنب بعض */
+}
+/* تنسيق شبكة الميديا (فيديو وصور) */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عنصرين في الصف */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* تنسيق كارت الفيديو للحفاظ على الابعاد */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* نسبة 16:9 يوتيوب ستاندرد */
+    height: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تنسيق الصور داخل الشبكة */
+.media-grid img {
+    width: 100%;
+    height: 200px; /* ارتفاع ثابت للصور */
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.media-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* في الموبايل يظهروا تحت بعض */
+@media (max-width: 768px) {
+    .media-grid {
+        grid-template-columns: 1fr; /* عمود واحد */
+    }
+}
+footer {
+    background-color: #1a252f;
+    color: #cfd8dc;
+    padding: 30px 0; /* قللت البادينج شوية عشان تكون رقيقة */
+    text-align: center; /* دي اللي بتجيب الكلام في النص */
+}
+
+footer p {
+    margin: 0; /* عشان يشيل المسافات الزيادة */
+}
+/* تنسيق حقوق المطور */
+.developer {
+    margin-top: 5px !important; /* مسافة صغيرة من فوق */
+    font-size: 0.85rem;         /* حجم خط أصغر قليلاً */
+    color: #bdc3c7;             /* لون رمادي فاتح */
+}
+
+.developer a {
+    color: var(--secondary-color); /* لون ذهبي (نفس لون الهوية) */
+    text-decoration: none;         /* إلغاء الخط تحت الكلمة */
+    font-weight: bold;             /* خط عريض */
+    transition: all 0.3s ease;
+}
+
+.developer a:hover {
+    color: var(--primary-color);   /* يتحول للأخضر عند الماوس */
+    text-shadow: 0 0 5px rgba(46, 125, 50, 0.5); /* تأثير توهج بسيط */
 }
