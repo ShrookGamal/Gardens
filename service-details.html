@@ -111,8 +111,8 @@
                 'videos/video2.mp4'
             ],
             gallery: [
-                'images/img2.jpg',
-                'images/IMG-20251204-WA0013.jpg'
+                'images/WhatsApp Image 2025-12-04 at 20.29.52_73cfc109.jpg',
+                'images/WhatsApp Image 2025-12-04 at 20.35.39_ff771f7e.jpg'
             ]
         },
         '2': {
@@ -131,7 +131,7 @@
                 'إضاءة مخفية (Hidden Light) لإبراز جمال المياه.'
             ],
             videos: [
-                'videos/video3.mp4',
+                'videos/WhatsApp Video 2025-12-04 at 21.02.53_219c140c.mp4',
                 'videos/WhatsApp Video 2025-12-04 at 19.31.03_feb2e59c.mp4'
             ],
             gallery: [
@@ -184,7 +184,7 @@
             ],
             gallery: [
                 'images/img7.jpg',
-                'images/img8.jpg'
+                'images/WhatsApp Image 2025-12-04 at 21.18.29_a7c04981.jpg'
             ]
         },
         '5': {
@@ -232,27 +232,22 @@
             ]
         }
     };
-
-    // كود جلب البيانات وعرضها
     const urlParams = new URLSearchParams(window.location.search);
     const serviceId = urlParams.get('id');
 
     if(serviceId && servicesDB[serviceId]) {
         const data = servicesDB[serviceId];
         
-        // 1. تعبئة النصوص
         document.getElementById('serviceTitle').innerText = data.title;
         document.getElementById('serviceSubtitle').innerText = 'عن ' + data.title;
         document.getElementById('serviceDesc').innerText = data.desc;
         document.getElementById('serviceHero').style.backgroundImage = `url('${data.image}')`;
         document.getElementById('bookingServiceName').value = 'طلب: ' + data.title;
 
-        // 2. تعبئة المميزات
         data.features.forEach(f => {
             document.getElementById('serviceFeatures').innerHTML += `<li><i class="fas fa-check-circle"></i> ${f}</li>`;
         });
 
-        // 3. تعبئة الفيديوهات (Loop)
         const videosContainer = document.getElementById('serviceVideos');
         data.videos.forEach(vidUrl => {
             videosContainer.innerHTML += `
@@ -265,14 +260,12 @@
             `;
         });
 
-        // 4. تعبئة الصور (Loop)
         const galleryContainer = document.getElementById('serviceGallery');
         data.gallery.forEach(imgSrc => {
             galleryContainer.innerHTML += `<img src="${imgSrc}" alt="${data.title}">`;
         });
     }
 
-    // كود القائمة (ثابت)
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
     const closeBtn = document.getElementById('closeBtn');
